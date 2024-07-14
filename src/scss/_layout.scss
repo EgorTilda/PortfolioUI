@@ -70,3 +70,25 @@
         margin-bottom: 3.125rem;
     }
 }
+
+// Work Template Styles
+.work-article {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    &__heading {
+        margin-bottom: 1.5rem;
+    }
+    &__desc {
+        display: flex;
+        margin-bottom: 1.563rem;
+    }
+    &__date-year {
+        margin-right: 1rem;
+    }
+    &__title {
+        font-size: 1.25rem;
+    }
+    &__img {
+        margin-top: 2.875rem;
+    }
+}
