@@ -1,0 +1,161 @@
+.header {
+    &__inner {
+        padding: 1.688rem 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+}
+.header-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    &__link {
+        display: inline-block;
+        font-size: 1.25rem;
+        font-weight: 500;
+        transition: .2s;
+    }
+    &__link::first-letter {
+        text-transform: uppercase;
+    }
+    &__link:not(:last-child) {
+        margin-right: 2rem;
+    }
+    &__link:hover {
+        color: var(--primary);
+    }
+    @media screen and (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: .625rem 1.25rem;
+    background-color: var(--primary);
+    border-radius: 2px;
+    &:visited {
+        color: var(--white);
+    }
+    &:hover {
+        background-color: var(--primary-light);
+    }
+}
+.btn-menu {
+    display: none;
+    @media screen and (max-width: $mobile) {
+        display: block;
+    }
+}
+.title {
+    font-size: 1.375rem;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link, &__link:visited {
+        color: var(--secondary);
+    }
+    @media screen and (max-width: $mobile) {
+        font-size: 1.125rem;
+    }
+}
+// Post Card
+.post-card {
+    padding: 2rem 1.25rem;
+    background-color: var(--surface);
+    border-radius: 4px;
+    &__heading {
+        margin-bottom: 1.5rem;
+    }
+    &__desc {
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
+        @media screen and (max-width: $mobile) {
+            font-size: 1rem;
+        }
+    }
+    &__divider {
+        margin: 0 10px;
+    }
+}
+// Work Card
+.work-card {
+    display: flex;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #E0E0E0;
+    &__thumb {
+        flex: 1 0 60%;
+        width: 246px;
+        height: 180px;
+        max-width: 246px;
+        max-height: 180px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+    &__content {
+        margin-left: 1.125rem;
+    }
+    &__heading {
+        font-size: 1.875rem;
+        margin-bottom: 1rem;
+    }
+    &__desc {
+        font-size: 1.25rem;
+        color: var(--light);
+        margin-bottom: 1.375rem;
+    }
+    &__date {
+        font-size: 1.125rem;
+        font-weight: 900;
+        color: var(--white);
+        padding: 2px 14px;
+        margin-right: 1.25rem;
+        border-radius: 1.2rem;
+        background-color: #142850;
+    }
+    @media screen and (max-width: 576px) {
+        flex-direction: column;
+        align-items: center;
+        &__content {
+            margin-left: 0;
+        }
+        &__thumb {
+            width: 100%;
+            height: 100%;
+            max-width: 340px;
+            max-height: 230px;
+            margin-bottom: 1rem;
+        }
+    }
+}
+// Footer 
+.footer {
+    padding: 3.125rem 0;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__social {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.625rem;
+    }
+    &__social-icon {
+        &:not(:last-child) {
+            margin-right: 2.188rem;
+        }
+    }
+}
+// Copyright
+.copyright {
+    font-size: .875rem;
+    color: var(--dark);
+    text-align: center;
+}

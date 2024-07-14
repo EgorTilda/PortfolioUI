@@ -1,4 +1,40 @@
 // Fonts
+@font-face {
+    font-family: 'Heebo';
+    src: url('./../font/Heebo-Black.woff2') format('woff2'),
+        url('./../font/Heebo-Black.woff') format('woff'),
+        url('./../font/Heebo-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Heebo';
+    src: url('./../font/Heebo-Bold.woff2') format('woff2'),
+        url('./../font/Heebo-Bold.woff') format('woff'),
+        url('./../font/Heebo-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Heebo';
+    src: url('./../font/Heebo-Medium.woff2') format('woff2'),
+        url('./../font/Heebo-Medium.woff') format('woff'),
+        url('./../font/Heebo-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Heebo';
+    src: url('./../font/Heebo-Regular.woff2') format('woff2'),
+        url('./../font/Heebo-Regular.woff') format('woff'),
+        url('./../font/Heebo-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 // Base
 html,
 body {
@@ -13,27 +49,31 @@ html {
 }
 body {
     color: var(--text);
-    background-color: var(--back);
     font-weight: 400;
     font-family: var(--font-main);
+}
+a:visited {
+    color: var(--black);
 }
 // Utils 
 .page {
     width: 100%;
     min-height: 100vh;
-    background-color: var(--dark);
     margin: 0 auto;
 }
 .container {
     width: 100%;
-    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    max-width: calc(var(--container-width-m) + var(--container-padding-x) * 2);
     margin-left: auto;
     margin-right: auto;
     padding: 0 var(--container-padding-x);
-    @media screen and (min-width: 1440px) {
-        max-width: 100%;
-        padding: 0 25px;
+    &--l {
+        max-width: calc(var(--container-width-l) + var(--container-padding-x) * 2);
     }
+    // @media screen and (min-width: 1440px) {
+    //     max-width: 100%;
+    //     padding: 0 25px;
+    // }
     @media screen and (max-width: 992px) {
         max-width:  750px;
     }
@@ -41,4 +81,73 @@ body {
         max-width: 100%;
     }
 }
+.row {
+    display: flex;
+    &--wrap {
+        flex-wrap: wrap;
+    }
+    @media screen and (max-width: $mobile) {
+        flex-direction: column;
+    }
+}
+.col {
+    &--2 {
+        flex: 1 1 50%;
+    }
+    &--2:not(:last-child) {
+        margin-right: 1.25rem;
+    }
+    &--1 {
+        flex: 1 1 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    @media screen and (max-width: $mobile) {
+        &--2 {
+            flex: 1 1 100%;
+        }
+        &--2:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 1.25rem;
+        }
+    }
+}
 // Typography
+h1, h2, h3, p {
+
+}
+h1 {
+    font-size: 2.75rem;
+    line-height: 140%;
+    @media screen and (max-width: $mobile) {
+       font-size: 2rem;
+    }
+}
+h2 {
+    font-size: 1.875rem;
+    line-height: 140%;
+    @media screen and (max-width: $mobile) {
+        font-size: 1.375rem;
+    }
+}
+h3 {
+    font-size: 1.625rem;
+    line-height: 140%;
+    @media screen and (max-width: $mobile) {
+        font-size: 1.375rem;
+    }
+}
+p {
+    font-size: 1rem;
+    line-height: 140%;
+}
+.heading {
+    font-weight: 700;
+    color: var(--text);
+}
+.text {
+    font-size: 1rem;
+    line-height: 101%;
+
+}

@@ -30,7 +30,7 @@ const scss = () => {
     .pipe(webpcss())
     .pipe(autoprefixer())
     .pipe(groupmedia())
-    .pipe(gulp.dest(path.scss.dest, {sourcemaps: app.isDev}))
+    //.pipe(gulp.dest(path.scss.dest, {sourcemaps: app.isDev}))
     .pipe(rename( {suffix: '.min'} ))
     .pipe(cssmin())
     .pipe(gulp.dest(path.scss.dest, {sourcemaps: app.isDev}));

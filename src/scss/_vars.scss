@@ -1,0 +1,28 @@
+:root {
+    // Colors
+    --primary: #FF6464;
+    --primary-light: #fd7878;
+    --secondary: #00A8CC;
+    --dark: #21243D;
+    --light: #8695A4;
+    --text: #21243D;
+    --surface: #FFF;
+    --surface-secondary: #EDF7FA;
+    --white: #fff;
+    --black: #000;
+
+    // Font
+    --font-main: 'Heebo', sans-serif;
+
+    // Container
+    --container-width-m: 855px;
+    --container-width-l: 1032px;
+    --container-padding-x: 15px;
+}
+
+$desktop-above: 1281px;
+$desktop: 1280px;
+$tablet-above: 1024px;
+$tablet: 1023px;
+$mobile-above: 768px;
+$mobile: 767px;

@@ -30,7 +30,7 @@ export default {
         dest: pathDest + '/img'
     },
     font: {
-        src: pathSrc + '/font/**/*.{ttf, otf, eot, ttc, otc, svg, woff, woff2}', // {ttf, otf, eot, ttc, otc, svg, woff, woff2}
+        src: pathSrc + '/font/**/*.{ttf, woff, woff2}', // {ttf, otf, eot, ttc, otc, svg, woff, woff2}
         watch: pathSrc + '/font/**/*.*',
         dest: pathDest + '/font'
     }
