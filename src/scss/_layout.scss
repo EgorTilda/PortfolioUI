@@ -1,4 +1,4 @@
-// Home 
+// Home Page 
 // Hero Section
 .hero {
     padding-top: 9.063rem;
@@ -57,3 +57,16 @@
         margin-bottom: 3rem;
     }
 } 
+
+// Blog Page
+.blog {
+    &__heading {
+        margin-bottom: 3.125rem;
+    }
+}
+// Work Page
+.work {
+    &__heading {
+        margin-bottom: 3.125rem;
+    }
+}

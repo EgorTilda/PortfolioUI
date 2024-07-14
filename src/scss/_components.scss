@@ -16,6 +16,9 @@
         font-weight: 500;
         transition: .2s;
     }
+    &__link:visited {
+        color: var(--dark) !important;
+    }
     &__link::first-letter {
         text-transform: uppercase;
     }
@@ -23,7 +26,7 @@
         margin-right: 2rem;
     }
     &__link:hover {
-        color: var(--primary);
+        color: var(--primary) !important;
     }
     @media screen and (max-width: $mobile) {
         display: none;
@@ -84,8 +87,8 @@
         margin: 0 10px;
     }
 }
-// Work Card
-.work-card {
+// Post Item
+.post-item {
     display: flex;
     padding-bottom: 1rem;
     border-bottom: solid 1px #E0E0E0;
@@ -97,13 +100,14 @@
         max-height: 180px;
         object-fit: cover;
         border-radius: 6px;
-    }
-    &__content {
-        margin-left: 1.125rem;
+        margin-right: 1.125rem;
     }
     &__heading {
         font-size: 1.875rem;
         margin-bottom: 1rem;
+        @media screen and (max-width: $mobile) {
+            font-size: 1.625rem;
+        }
     }
     &__desc {
         font-size: 1.25rem;
@@ -119,6 +123,17 @@
         border-radius: 1.2rem;
         background-color: #142850;
     }
+    &__date-full {
+        color: var(--dark);
+        font-size: 1.25rem;
+    }
+    &__divider {
+        margin: 0 1.25rem;
+        color: var(--black);
+        @media screen and (max-width: $mobile) {
+            margin: 0 1rem;
+        }
+    }
     @media screen and (max-width: 576px) {
         flex-direction: column;
         align-items: center;
@@ -130,6 +145,7 @@
             height: 100%;
             max-width: 340px;
             max-height: 230px;
+            margin-right: 0;
             margin-bottom: 1rem;
         }
     }
